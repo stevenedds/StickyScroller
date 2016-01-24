@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uK8-Sh-Gj0">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Sticky Scroller-->
+        <scene sceneID="M4X-uu-FuM">
+            <objects>
+                <collectionViewController id="Ujt-97-xKX" customClass="StickyCollectionViewController" customModule="StickyScroller" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="MlE-cK-wSM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="r2G-yj-mwy" customClass="StickyCustomCollectionViewLayout" customModule="StickyScroller" customModuleProvider="target">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="Ujt-97-xKX" id="VeL-fw-bIy"/>
+                            <outlet property="delegate" destination="Ujt-97-xKX" id="H7O-f7-dbo"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Sticky Scroller" id="SAb-ma-e6z"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TFE-Bx-zKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1370" y="482"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SLb-8i-ARt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uK8-Sh-Gj0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="vCB-lL-f2Q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ujt-97-xKX" kind="relationship" relationship="rootViewController" id="jWK-qB-fjX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3hJ-cE-P0D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="558" y="482"/>
+        </scene>
+    </scenes>
+</document>
